@@ -19,7 +19,8 @@ class PostsController < ApplicationController
   private
 
 #nested params hash with data about the primary object
-#association attributes 
+#association attributes
+#key of :category_ids with a value of an array 
   def post_params
  params.require(:post).permit(:title, :content, category_ids:[], categories_attributes: [:name])
   end

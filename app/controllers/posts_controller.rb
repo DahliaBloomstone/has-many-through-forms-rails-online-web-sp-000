@@ -18,6 +18,7 @@ class PostsController < ApplicationController
 
   private
 
+#nested params hash with data about the primary object 
   def post_params
  params.require(:post).permit(:title, :content, category_ids:[], categories_attributes: [:name])
   end

@@ -20,7 +20,8 @@ class PostsController < ApplicationController
 
 #nested params hash with data about the primary object
 #association attributes
-#key of :category_ids with a value of an array 
+#key of :category_ids with a value of an array
+#sql fires from creating our new post 
   def post_params
  params.require(:post).permit(:title, :content, category_ids:[], categories_attributes: [:name])
   end

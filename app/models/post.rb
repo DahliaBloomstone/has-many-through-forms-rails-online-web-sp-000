@@ -8,7 +8,7 @@ class Post < ActiveRecord::Base
 #customize the way our category is created by making this method
 #creating a new category if it doesn't already exist with the current name
 #call self.categories returns an array of category objects
-# then shovel << method to add our newly found or created Category object to the array 
+# then shovel << method to add our newly found or created Category object to the array
   def categories_attributes=(category_attributes)
     category_attributes.values.each do |category_attribute|
       category = Category.find_or_create_by(category_attribute)
@@ -16,3 +16,6 @@ class Post < ActiveRecord::Base
     end
   end
 end
+
+
+#customizing active record a little bit 

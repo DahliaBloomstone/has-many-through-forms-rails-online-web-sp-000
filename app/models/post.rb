@@ -5,7 +5,8 @@ class Post < ActiveRecord::Base
 #bi directional has many through
 
 
-#customize the way our category is created by making this method 
+#customize the way our category is created by making this method
+#creating a new category if it doesn't already exist with the current name
   def categories_attributes=(category_attributes)
     category_attributes.values.each do |category_attribute|
       category = Category.find_or_create_by(category_attribute)

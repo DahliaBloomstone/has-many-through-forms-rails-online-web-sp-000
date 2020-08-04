@@ -4,7 +4,7 @@
 
 <%= form_for post do |f| %>
   <%= f.label "Title" %>
-  <%= f.text_field :title %>
+  <%= f.text_field :title %> <!--text field to enter name of new category nested under post_params -->
   <%= f.label "Content" %>
   <%= f.text_area :content %>
   <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %>
@@ -16,4 +16,5 @@
 
 
 <!-- user can assign categories to a post when the post is created
-instances of our post class respond to a method called category_ids= 
+instances of our post class respond to a method called category_ids=
+#associate categories iwth posts
